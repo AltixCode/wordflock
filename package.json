@@ -65,7 +65,8 @@
     "submit:production": "eas submit --profile production --platform all --latest",
     "check:i18n": "node scripts/check-i18n.mjs",
     "check:ui": "node scripts/check-ui-rules.mjs",
-    "verify:device": "bash scripts/verify-app.sh"
+    "verify:device": "bash scripts/verify-app.sh",
+    "check:puzzles": "node scripts/check-puzzles.mjs"
   },
   "overrides": {
     "react-dom": "19.2.0"

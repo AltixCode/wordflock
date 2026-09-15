@@ -1,0 +1,1356 @@
+{
+  "version": 1,
+  "note": "Hand-authored. Every word belongs to exactly one group in its puzzle — `npm run check:puzzles` enforces that, and it is the rule this genre dies on. Misdirection comes from a word that LOOKS like it fits another group on the board while fitting its own exactly; it never comes from listing the same word twice. Difficulty 1 is the giveaway, 4 is the awkward one.",
+  "puzzles": [
+    {
+      "id": "wf-0001",
+      "groups": [
+        {
+          "theme": "Citrus fruits",
+          "words": [
+            "Lemon",
+            "Pomelo",
+            "Grapefruit",
+            "Clementine"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Shades of red",
+          "words": [
+            "Crimson",
+            "Scarlet",
+            "Ruby",
+            "Vermilion"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Chess pieces",
+          "words": [
+            "Rook",
+            "Bishop",
+            "Knight",
+            "Pawn"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "___ tree",
+          "words": [
+            "Family",
+            "Palm",
+            "Shoe",
+            "Money"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0002",
+      "groups": [
+        {
+          "theme": "Big cats",
+          "words": [
+            "Jaguar",
+            "Cougar",
+            "Panther",
+            "Ocelot"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Card-table verbs",
+          "words": [
+            "Deal",
+            "Shuffle",
+            "Fold",
+            "Bluff"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Things with keys",
+          "words": [
+            "Piano",
+            "Map",
+            "Padlock",
+            "Legend"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Sportswear brands",
+          "words": [
+            "Reebok",
+            "Fila",
+            "Umbro",
+            "Kappa"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0003",
+      "groups": [
+        {
+          "theme": "Pasta shapes",
+          "words": [
+            "Penne",
+            "Fusilli",
+            "Rigatoni",
+            "Orzo"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Ocean zones",
+          "words": [
+            "Abyssal",
+            "Sunlight",
+            "Twilight",
+            "Hadal"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Cocktail garnishes",
+          "words": [
+            "Olive",
+            "Twist",
+            "Wedge",
+            "Sprig"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Dance moves",
+          "words": [
+            "Dip",
+            "Glide",
+            "Shimmy",
+            "Sashay"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0004",
+      "groups": [
+        {
+          "theme": "Planets",
+          "words": [
+            "Venus",
+            "Saturn",
+            "Neptune",
+            "Uranus"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Roman gods",
+          "words": [
+            "Vulcan",
+            "Juno",
+            "Ceres",
+            "Janus"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Defunct car makes",
+          "words": [
+            "Pontiac",
+            "Oldsmobile",
+            "Plymouth",
+            "Studebaker"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Soft metals",
+          "words": [
+            "Mercury",
+            "Lead",
+            "Tin",
+            "Gallium"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0005",
+      "groups": [
+        {
+          "theme": "Bad weather",
+          "words": [
+            "Drizzle",
+            "Sleet",
+            "Hail",
+            "Gale"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Breads",
+          "words": [
+            "Bagel",
+            "Brioche",
+            "Focaccia",
+            "Ciabatta"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Knots",
+          "words": [
+            "Bowline",
+            "Clove hitch",
+            "Reef",
+            "Sheepshank"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Spelt like a letter",
+          "words": [
+            "Bee",
+            "Sea",
+            "Why",
+            "Queue"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0006",
+      "groups": [
+        {
+          "theme": "Board games",
+          "words": [
+            "Cluedo",
+            "Scrabble",
+            "Backgammon",
+            "Mahjong"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Shakespeare tragedies",
+          "words": [
+            "Hamlet",
+            "Macbeth",
+            "Othello",
+            "Coriolanus"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Small settlements",
+          "words": [
+            "Village",
+            "Thorp",
+            "Commune",
+            "Kraal"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Insurance words",
+          "words": [
+            "Risk",
+            "Premium",
+            "Excess",
+            "Cover"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0007",
+      "groups": [
+        {
+          "theme": "Herbs",
+          "words": [
+            "Basil",
+            "Thyme",
+            "Oregano",
+            "Chervil"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Stretches of time",
+          "words": [
+            "Fortnight",
+            "Decade",
+            "Eon",
+            "Trimester"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Fictional detectives",
+          "words": [
+            "Poirot",
+            "Marple",
+            "Holmes",
+            "Wimsey"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "___ saver",
+          "words": [
+            "Screen",
+            "Life",
+            "Money",
+            "Face"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0008",
+      "groups": [
+        {
+          "theme": "Mountain ranges",
+          "words": [
+            "Andes",
+            "Urals",
+            "Rockies",
+            "Carpathians"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Parts of a book",
+          "words": [
+            "Spine",
+            "Index",
+            "Glossary",
+            "Colophon"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Greek titans",
+          "words": [
+            "Atlas",
+            "Cronus",
+            "Rhea",
+            "Hyperion"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Bones",
+          "words": [
+            "Pelvis",
+            "Sternum",
+            "Femur",
+            "Scapula"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0009",
+      "groups": [
+        {
+          "theme": "Coffee drinks",
+          "words": [
+            "Latte",
+            "Macchiato",
+            "Cortado",
+            "Ristretto"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Ways to say quickly",
+          "words": [
+            "Apace",
+            "Pronto",
+            "Swiftly",
+            "Anon"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Typesetting terms",
+          "words": [
+            "Kerning",
+            "Leading",
+            "Bleed",
+            "Gutter"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Hidden animals",
+          "words": [
+            "Scowl",
+            "Beard",
+            "Brat",
+            "Camelot"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0010",
+      "groups": [
+        {
+          "theme": "Types of bridge",
+          "words": [
+            "Suspension",
+            "Arch",
+            "Cantilever",
+            "Truss"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Guitar parts",
+          "words": [
+            "Fret",
+            "Nut",
+            "Pickup",
+            "Saddle"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Worry",
+          "words": [
+            "Stew",
+            "Fuss",
+            "Brood",
+            "Agonise"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Poker hands",
+          "words": [
+            "Flush",
+            "Straight",
+            "Pair",
+            "Boat"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0011",
+      "groups": [
+        {
+          "theme": "Sharks",
+          "words": [
+            "Hammerhead",
+            "Thresher",
+            "Mako",
+            "Wobbegong"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Hospital staff",
+          "words": [
+            "Nurse",
+            "Registrar",
+            "Matron",
+            "Almoner"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Beer styles",
+          "words": [
+            "Porter",
+            "Stout",
+            "Lager",
+            "Saison"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Dickens characters",
+          "words": [
+            "Pip",
+            "Fagin",
+            "Havisham",
+            "Micawber"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0012",
+      "groups": [
+        {
+          "theme": "Desert animals",
+          "words": [
+            "Fennec",
+            "Jerboa",
+            "Addax",
+            "Oryx"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Coastal landforms",
+          "words": [
+            "Dune",
+            "Spit",
+            "Tombolo",
+            "Stack"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Parts of a pub",
+          "words": [
+            "Bar",
+            "Snug",
+            "Tap",
+            "Skittle alley"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Cut short",
+          "words": [
+            "Clip",
+            "Crop",
+            "Dock",
+            "Trim"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0013",
+      "groups": [
+        {
+          "theme": "Punctuation marks",
+          "words": [
+            "Comma",
+            "Colon",
+            "Ellipsis",
+            "Pilcrow"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Digestive organs",
+          "words": [
+            "Liver",
+            "Ileum",
+            "Caecum",
+            "Duodenum"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Track events",
+          "words": [
+            "Dash",
+            "Relay",
+            "Hurdles",
+            "Steeplechase"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Moths",
+          "words": [
+            "Emperor",
+            "Hawk",
+            "Ghost",
+            "Lappet"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0014",
+      "groups": [
+        {
+          "theme": "Sewing tools",
+          "words": [
+            "Bobbin",
+            "Pinking shears",
+            "Seam ripper",
+            "Bodkin"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Monopoly tokens",
+          "words": [
+            "Thimble",
+            "Boot",
+            "Wheelbarrow",
+            "Top hat"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Golf clubs",
+          "words": [
+            "Iron",
+            "Wedge",
+            "Putter",
+            "Mashie"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Computer peripherals",
+          "words": [
+            "Mouse",
+            "Scanner",
+            "Plotter",
+            "Trackball"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0015",
+      "groups": [
+        {
+          "theme": "Cheeses",
+          "words": [
+            "Gruyere",
+            "Manchego",
+            "Taleggio",
+            "Roquefort"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "French regions",
+          "words": [
+            "Brittany",
+            "Alsace",
+            "Normandy",
+            "Picardy"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Sleep lightly",
+          "words": [
+            "Doze",
+            "Slumber",
+            "Nap",
+            "Kip"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "___ board",
+          "words": [
+            "Skate",
+            "Key",
+            "Card",
+            "Dash"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0016",
+      "groups": [
+        {
+          "theme": "Garden tools",
+          "words": [
+            "Trowel",
+            "Rake",
+            "Scythe",
+            "Dibber"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Croquet terms",
+          "words": [
+            "Mallet",
+            "Hoop",
+            "Peg",
+            "Roquet"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Basketball terms",
+          "words": [
+            "Dunk",
+            "Assist",
+            "Screen",
+            "Rebound"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Disreputable men",
+          "words": [
+            "Cad",
+            "Rogue",
+            "Knave",
+            "Bounder"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0017",
+      "groups": [
+        {
+          "theme": "Birds of prey",
+          "words": [
+            "Kestrel",
+            "Buzzard",
+            "Goshawk",
+            "Osprey"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Arthurian figures",
+          "words": [
+            "Merlin",
+            "Gawain",
+            "Igraine",
+            "Mordred"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "British aircraft",
+          "words": [
+            "Harrier",
+            "Spitfire",
+            "Vulcan",
+            "Lancaster"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Spinning storms",
+          "words": [
+            "Tornado",
+            "Cyclone",
+            "Twister",
+            "Vortex"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0018",
+      "groups": [
+        {
+          "theme": "Classical orders",
+          "words": [
+            "Doric",
+            "Ionic",
+            "Corinthian",
+            "Tuscan"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Newspaper sections",
+          "words": [
+            "Obituaries",
+            "Classifieds",
+            "Leader",
+            "Letters"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Chemical bonds",
+          "words": [
+            "Covalent",
+            "Metallic",
+            "Hydrogen",
+            "Peptide"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "One who goes first",
+          "words": [
+            "Pioneer",
+            "Vanguard",
+            "Trailblazer",
+            "Forerunner"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0019",
+      "groups": [
+        {
+          "theme": "Knitting stitches",
+          "words": [
+            "Purl",
+            "Garter",
+            "Moss",
+            "Cable"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Cuts of beef",
+          "words": [
+            "Rib",
+            "Brisket",
+            "Flank",
+            "Chuck"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Throw",
+          "words": [
+            "Lob",
+            "Hurl",
+            "Sling",
+            "Fling"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Sales talk",
+          "words": [
+            "Pitch",
+            "Spiel",
+            "Patter",
+            "Line"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0020",
+      "groups": [
+        {
+          "theme": "Volcano anatomy",
+          "words": [
+            "Caldera",
+            "Magma",
+            "Cone",
+            "Fumarole"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Ice cream shop",
+          "words": [
+            "Scoop",
+            "Sundae",
+            "Wafer",
+            "Sprinkles"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Newsroom words",
+          "words": [
+            "Byline",
+            "Splash",
+            "Stringer",
+            "Spike"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Show anger",
+          "words": [
+            "Vent",
+            "Rant",
+            "Fume",
+            "Seethe"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0021",
+      "groups": [
+        {
+          "theme": "Constellations",
+          "words": [
+            "Orion",
+            "Lyra",
+            "Cygnus",
+            "Cassiopeia"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Ancient Athenians",
+          "words": [
+            "Draco",
+            "Solon",
+            "Pericles",
+            "Cleisthenes"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Harry Potter surnames",
+          "words": [
+            "Malfoy",
+            "Lovegood",
+            "Weasley",
+            "Longbottom"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Swan words",
+          "words": [
+            "Cob",
+            "Pen",
+            "Cygnet",
+            "Bevy"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0022",
+      "groups": [
+        {
+          "theme": "Salad leaves",
+          "words": [
+            "Rocket",
+            "Endive",
+            "Radicchio",
+            "Mizuna"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Siege engines",
+          "words": [
+            "Catapult",
+            "Trebuchet",
+            "Ballista",
+            "Mangonel"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Baby carriers",
+          "words": [
+            "Papoose",
+            "Pram",
+            "Carrycot",
+            "Moses basket"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Sudden rise",
+          "words": [
+            "Surge",
+            "Jump",
+            "Leap",
+            "Spurt"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0023",
+      "groups": [
+        {
+          "theme": "Whales",
+          "words": [
+            "Beluga",
+            "Minke",
+            "Narwhal",
+            "Sei"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Caviar",
+          "words": [
+            "Osetra",
+            "Sevruga",
+            "Roe",
+            "Kaluga"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Deer",
+          "words": [
+            "Fallow",
+            "Sika",
+            "Muntjac",
+            "Reindeer"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Rough open ground",
+          "words": [
+            "Waste",
+            "Scrub",
+            "Heath",
+            "Moor"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0024",
+      "groups": [
+        {
+          "theme": "Mother sauces",
+          "words": [
+            "Bechamel",
+            "Veloute",
+            "Espagnole",
+            "Hollandaise"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Egg dishes",
+          "words": [
+            "Omelette",
+            "Frittata",
+            "Shakshuka",
+            "Kedgeree"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Treated too kindly",
+          "words": [
+            "Coddled",
+            "Indulged",
+            "Pampered",
+            "Mollycoddled"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Gone off",
+          "words": [
+            "Rancid",
+            "Addled",
+            "Turned",
+            "Putrid"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0025",
+      "groups": [
+        {
+          "theme": "Dog breeds",
+          "words": [
+            "Basenji",
+            "Vizsla",
+            "Saluki",
+            "Komondor"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Coats",
+          "words": [
+            "Trench",
+            "Parka",
+            "Anorak",
+            "Duffel"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Fortifications",
+          "words": [
+            "Bunker",
+            "Redoubt",
+            "Parapet",
+            "Bastion"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "On a golf course",
+          "words": [
+            "Rough",
+            "Fairway",
+            "Apron",
+            "Fescue"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0026",
+      "groups": [
+        {
+          "theme": "Moons of Jupiter",
+          "words": [
+            "Europa",
+            "Io",
+            "Callisto",
+            "Ganymede"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Continents",
+          "words": [
+            "Asia",
+            "Africa",
+            "Oceania",
+            "Antarctica"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Seas",
+          "words": [
+            "Aegean",
+            "Adriatic",
+            "Baltic",
+            "Ionian"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Valid two-letter Scrabble words",
+          "words": [
+            "Qi",
+            "Za",
+            "Xu",
+            "Ai"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0027",
+      "groups": [
+        {
+          "theme": "Nervous habits",
+          "words": [
+            "Twitch",
+            "Fidget",
+            "Pacing",
+            "Nail-biting"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Muscles",
+          "words": [
+            "Deltoid",
+            "Soleus",
+            "Trapezius",
+            "Sartorius"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Four-sided shapes",
+          "words": [
+            "Rhombus",
+            "Trapezium",
+            "Kite",
+            "Parallelogram"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Things you fly",
+          "words": [
+            "Flag",
+            "Drone",
+            "Glider",
+            "Banner"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0028",
+      "groups": [
+        {
+          "theme": "Mushrooms",
+          "words": [
+            "Chanterelle",
+            "Morel",
+            "Porcini",
+            "Enoki"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Virtues",
+          "words": [
+            "Prudence",
+            "Temperance",
+            "Fortitude",
+            "Justice"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Scout promise words",
+          "words": [
+            "Duty",
+            "Honour",
+            "Service",
+            "Loyalty"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Tennis scoring",
+          "words": [
+            "Deuce",
+            "Love",
+            "Advantage",
+            "Fault"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0029",
+      "groups": [
+        {
+          "theme": "European rivers",
+          "words": [
+            "Danube",
+            "Elbe",
+            "Loire",
+            "Tagus"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Waltz composers",
+          "words": [
+            "Strauss",
+            "Chopin",
+            "Lehar",
+            "Waldteufel"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Pastry doughs",
+          "words": [
+            "Choux",
+            "Filo",
+            "Puff",
+            "Shortcrust"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Blow gently",
+          "words": [
+            "Waft",
+            "Breathe",
+            "Whiffle",
+            "Exhale"
+          ],
+          "difficulty": 4
+        }
+      ]
+    },
+    {
+      "id": "wf-0030",
+      "groups": [
+        {
+          "theme": "Optical instruments",
+          "words": [
+            "Periscope",
+            "Telescope",
+            "Microscope",
+            "Loupe"
+          ],
+          "difficulty": 1
+        },
+        {
+          "theme": "Fit inside one another",
+          "words": [
+            "Nest",
+            "Stack",
+            "Fold",
+            "Collapse"
+          ],
+          "difficulty": 2
+        },
+        {
+          "theme": "Where birds live",
+          "words": [
+            "Eyrie",
+            "Rookery",
+            "Roost",
+            "Nesting box"
+          ],
+          "difficulty": 3
+        },
+        {
+          "theme": "Chimney parts",
+          "words": [
+            "Flue",
+            "Cowl",
+            "Damper",
+            "Breast"
+          ],
+          "difficulty": 4
+        }
+      ]
+    }
+  ]
+}
