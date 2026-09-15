@@ -7,11 +7,16 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { MISTAKES_ALLOWED } from '@/logic/puzzle';
+import { usePremiumStore } from '../usePremiumStore';
 import { useGameStore } from '../useGameStore';
 
 jest.mock('@/content/sync', () => ({
   syncContent: jest.fn().mockResolvedValue({ feedReachable: true, packsAdded: [], problems: [] }),
   servedThrough: jest.fn().mockResolvedValue(null),
+}));
+jest.mock('@/monetization/interstitial', () => ({
+  preloadInterstitial: jest.fn(),
+  showInterstitial: jest.fn().mockReturnValue(true),
 }));
 jest.mock('expo-network', () => ({
   getNetworkStateAsync: jest.fn().mockResolvedValue({ isConnected: true, isInternetReachable: true }),
@@ -19,6 +24,7 @@ jest.mock('expo-network', () => ({
 
 const { syncContent, servedThrough } = jest.requireMock('@/content/sync');
 const { getNetworkStateAsync } = jest.requireMock('expo-network');
+const { showInterstitial } = jest.requireMock('@/monetization/interstitial');
 
 // A day inside the bundled bank's reach, with the install on the same day.
 const TODAY = '2026-03-01';
@@ -29,7 +35,14 @@ beforeEach(async () => {
   syncContent.mockResolvedValue({ feedReachable: true, packsAdded: [], problems: [] });
   servedThrough.mockResolvedValue(null);
   getNetworkStateAsync.mockResolvedValue({ isConnected: true, isInternetReachable: true });
+  showInterstitial.mockClear().mockReturnValue(true);
+  usePremiumStore.setState({ isPremium: false, isReady: true });
 });
+
+async function completedCount(): Promise<number> {
+  const raw = await AsyncStorage.getItem('wordflock.adPacing.v1');
+  return raw === null ? 0 : (JSON.parse(raw) as { completed: number }).completed;
+}
 
 async function loaded() {
   await useGameStore.getState().load(TODAY);
@@ -185,5 +198,61 @@ describe('submit', () => {
   it('does nothing before a board exists', async () => {
     await expect(useGameStore.getState().submit()).resolves.toBeUndefined();
     expect(useGameStore.getState().lastOutcome).toBeNull();
+  });
+});
+
+/**
+ * The wiring, not the policy.
+ *
+ * `adPolicy` has its own passing unit test, and it kept passing in six sibling
+ * apps whose call site hands it a literal `gamesPlayed: 1` -- below the
+ * `MIN_GAMES_BEFORE_FIRST_INTERSTITIAL` of 2, so the branch is dead and the
+ * full-screen ad can never appear. Their paywalls sell its removal regardless.
+ * A test of the policy function cannot see that; only a test of the call site
+ * can, which is what these are.
+ */
+describe('the interstitial actually reaches the screen', () => {
+  async function finishAPuzzle(day: string) {
+    await useGameStore.getState().load(day);
+    const groups = useGameStore.getState().session!.puzzle.groups;
+    for (const g of groups) {
+      for (const w of g.words) useGameStore.getState().toggle(w);
+      await useGameStore.getState().submit();
+    }
+    expect(useGameStore.getState().session?.status).toBe('won');
+  }
+
+  it('stays quiet for the first puzzles, then shows one the pacing has earned', async () => {
+    await finishAPuzzle('2026-03-01');
+    expect(showInterstitial).not.toHaveBeenCalled();
+    await finishAPuzzle('2026-03-02');
+    expect(showInterstitial).not.toHaveBeenCalled();
+
+    // The third completed puzzle is the first the policy allows.
+    await finishAPuzzle('2026-03-03');
+    expect(showInterstitial).toHaveBeenCalledTimes(1);
+  });
+
+  it('counts completed puzzles across launches, not within one session', async () => {
+    await finishAPuzzle('2026-03-01');
+    await finishAPuzzle('2026-03-02');
+    // A cold start: the count must survive it, or the gate is never reached.
+    useGameStore.getState().resetForTests();
+    await finishAPuzzle('2026-03-03');
+    expect(showInterstitial).toHaveBeenCalledTimes(1);
+  });
+
+  it('never shows one to a player who has paid to remove it', async () => {
+    usePremiumStore.setState({ isPremium: true, isReady: true });
+    for (const d of ['2026-03-01', '2026-03-02', '2026-03-03']) await finishAPuzzle(d);
+    expect(showInterstitial).not.toHaveBeenCalled();
+  });
+
+  it('does not count a puzzle that is still in play', async () => {
+    await useGameStore.getState().load('2026-03-01');
+    const g = useGameStore.getState().session!.puzzle.groups[0]!;
+    for (const w of g.words) useGameStore.getState().toggle(w);
+    await useGameStore.getState().submit();
+    expect(await completedCount()).toBe(0);
   });
 });
