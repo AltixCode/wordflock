@@ -1,0 +1,142 @@
+{
+  "note": "Authored for the feed. Order is the serving order and must never change once published.",
+  "puzzles": [
+    { "id": "wf-f0001", "groups": [
+      { "theme": "Breakfast foods", "words": ["Waffle", "Omelette", "Porridge", "Granola"], "difficulty": 1 },
+      { "theme": "Types of bridge", "words": ["Suspension", "Arch", "Truss", "Cantilever"], "difficulty": 2 },
+      { "theme": "Words before 'board'", "words": ["Card", "Key", "Surf", "Skate"], "difficulty": 3 },
+      { "theme": "Homophones of letters", "words": ["Bee", "Sea", "Why", "Queue"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0002", "groups": [
+      { "theme": "Big cats", "words": ["Jaguar", "Leopard", "Cougar", "Cheetah"], "difficulty": 1 },
+      { "theme": "Card games", "words": ["Bridge", "Rummy", "Canasta", "Cribbage"], "difficulty": 2 },
+      { "theme": "Things with a mouth", "words": ["River", "Cave", "Volcano", "Bottle"], "difficulty": 3 },
+      { "theme": "___ shot", "words": ["Mug", "Long", "Moon", "Buck"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0003", "groups": [
+      { "theme": "Herbs", "words": ["Thyme", "Oregano", "Chervil", "Tarragon"], "difficulty": 1 },
+      { "theme": "Knots", "words": ["Bowline", "Clove hitch", "Sheet bend", "Figure eight"], "difficulty": 2 },
+      { "theme": "Units of paper", "words": ["Ream", "Quire", "Bale", "Sheet"], "difficulty": 3 },
+      { "theme": "Homophones of time words", "words": ["Weak", "Ours", "Daze", "Knight"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0004", "groups": [
+      { "theme": "Clouds", "words": ["Cirrus", "Stratus", "Cumulus", "Nimbus"], "difficulty": 1 },
+      { "theme": "Roman roads and walls", "words": ["Watling", "Fosse", "Hadrian", "Antonine"], "difficulty": 2 },
+      { "theme": "Words meaning 'tiny'", "words": ["Minute", "Scant", "Slight", "Wee"], "difficulty": 3 },
+      { "theme": "Halves of compound colours", "words": ["Navy", "Royal", "Sky", "Baby"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0005", "groups": [
+      { "theme": "Pasta shapes", "words": ["Fusilli", "Rigatoni", "Orzo", "Farfalle"], "difficulty": 1 },
+      { "theme": "Chess openings", "words": ["Sicilian", "Caro-Kann", "Ruy Lopez", "Slav"], "difficulty": 2 },
+      { "theme": "Things that can be 'sprung'", "words": ["Leak", "Trap", "Surprise", "Mattress"], "difficulty": 3 },
+      { "theme": "___ cap", "words": ["Knee", "Night", "Hub", "Skull"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0006", "groups": [
+      { "theme": "Punctuation marks", "words": ["Colon", "Ellipsis", "Caret", "Pilcrow"], "difficulty": 1 },
+      { "theme": "Mountain ranges", "words": ["Andes", "Atlas", "Urals", "Carpathians"], "difficulty": 2 },
+      { "theme": "Words before 'plate'", "words": ["Tectonic", "Number", "Hot", "Name"], "difficulty": 3 },
+      { "theme": "Greek letters in disguise", "words": ["Pie", "Roe", "Mew", "Chai"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0007", "groups": [
+      { "theme": "Sewing tools", "words": ["Bobbin", "Thimble", "Bodkin", "Pinking shears"], "difficulty": 1 },
+      { "theme": "Deserts", "words": ["Gobi", "Kalahari", "Mojave", "Atacama"], "difficulty": 2 },
+      { "theme": "Ways to say 'stop'", "words": ["Halt", "Cease", "Desist", "Quit"], "difficulty": 3 },
+      { "theme": "___ horse", "words": ["Sea", "Clothes", "Dark", "Hobby"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0008", "groups": [
+      { "theme": "Constellations", "words": ["Orion", "Lyra", "Cygnus", "Draco"], "difficulty": 1 },
+      { "theme": "Coffee drinks", "words": ["Cortado", "Macchiato", "Flat white", "Affogato"], "difficulty": 2 },
+      { "theme": "Things that come in a pod", "words": ["Pea", "Whale", "Vanilla", "Escape"], "difficulty": 3 },
+      { "theme": "Silent-K words", "words": ["Knead", "Knell", "Knave", "Knurl"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0009", "groups": [
+      { "theme": "Bread", "words": ["Focaccia", "Challah", "Ciabatta", "Brioche"], "difficulty": 1 },
+      { "theme": "Sailing terms", "words": ["Tack", "Jibe", "Luff", "Heel"], "difficulty": 2 },
+      { "theme": "Ways to walk", "words": ["Amble", "Trudge", "Saunter", "Stride"], "difficulty": 3 },
+      { "theme": "___ iron", "words": ["Wrought", "Waffle", "Curling", "Pumping"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0010", "groups": [
+      { "theme": "Currencies", "words": ["Dinar", "Rupiah", "Forint", "Krona"], "difficulty": 1 },
+      { "theme": "Poetic forms", "words": ["Villanelle", "Sestina", "Ghazal", "Pantoum"], "difficulty": 2 },
+      { "theme": "Words meaning 'brief'", "words": ["Fleeting", "Terse", "Curt", "Passing"], "difficulty": 3 },
+      { "theme": "Hidden animals", "words": ["Scowl", "Boxer", "Crate", "Spigot"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0011", "groups": [
+      { "theme": "Volcanoes", "words": ["Etna", "Krakatoa", "Popocatepetl", "Cotopaxi"], "difficulty": 1 },
+      { "theme": "Fencing terms", "words": ["Riposte", "Parry", "Lunge", "Feint"], "difficulty": 2 },
+      { "theme": "Things a clock has", "words": ["Face", "Hands", "Pendulum", "Chime"], "difficulty": 3 },
+      { "theme": "___ ball", "words": ["Odd", "Screw", "Fire", "High"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0012", "groups": [
+      { "theme": "Types of column", "words": ["Doric", "Ionic", "Corinthian", "Tuscan"], "difficulty": 1 },
+      { "theme": "Rivers of Europe", "words": ["Loire", "Vistula", "Tagus", "Ebro"], "difficulty": 2 },
+      { "theme": "Words meaning 'boundary'", "words": ["Verge", "Marge", "Pale", "Bourne"], "difficulty": 3 },
+      { "theme": "Musical terms used elsewhere", "words": ["Rest", "Bar", "Scale", "Key"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0013", "groups": [
+      { "theme": "Types of pepper", "words": ["Jalapeno", "Habanero", "Poblano", "Serrano"], "difficulty": 1 },
+      { "theme": "Baltic and Nordic capitals", "words": ["Riga", "Tallinn", "Vilnius", "Reykjavik"], "difficulty": 2 },
+      { "theme": "Ways of laughing", "words": ["Chortle", "Guffaw", "Titter", "Cackle"], "difficulty": 3 },
+      { "theme": "Words containing smaller words for 'small'", "words": ["Weeping", "Slightly", "Minister", "Scantily"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0014", "groups": [
+      { "theme": "Dances", "words": ["Tango", "Foxtrot", "Mazurka", "Bolero"], "difficulty": 1 },
+      { "theme": "NATO alphabet", "words": ["Kilo", "Sierra", "Zulu", "Whiskey"], "difficulty": 2 },
+      { "theme": "Types of joint", "words": ["Hinge", "Pivot", "Saddle", "Mortise"], "difficulty": 3 },
+      { "theme": "___ trap", "words": ["Speed", "Sand", "Tourist", "Booby"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0015", "groups": [
+      { "theme": "Gemstones", "words": ["Peridot", "Zircon", "Spinel", "Tanzanite"], "difficulty": 1 },
+      { "theme": "Printing terms", "words": ["Kerning", "Leading", "Serif", "Ligature"], "difficulty": 2 },
+      { "theme": "Words meaning 'stubborn'", "words": ["Obdurate", "Dogged", "Wilful", "Mulish"], "difficulty": 3 },
+      { "theme": "Animals inside adjectives", "words": ["Scatter", "Crabby", "Bullish", "Ratty"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0016", "groups": [
+      { "theme": "Mushrooms", "words": ["Chanterelle", "Porcini", "Morel", "Enoki"], "difficulty": 1 },
+      { "theme": "Sleep stages and terms", "words": ["REM", "Circadian", "Melatonin", "Somnolence"], "difficulty": 2 },
+      { "theme": "Things with teeth", "words": ["Comb", "Zip", "Gear", "Saw"], "difficulty": 3 },
+      { "theme": "___ line", "words": ["Dead", "Punch", "Sky", "Bee"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0017", "groups": [
+      { "theme": "Types of sail", "words": ["Spinnaker", "Genoa", "Mizzen", "Jib"], "difficulty": 1 },
+      { "theme": "Logical fallacies", "words": ["Strawman", "Slippery slope", "Ad hominem", "Begging"], "difficulty": 2 },
+      { "theme": "Things you can draw", "words": ["Curtain", "Breath", "Conclusion", "Blood"], "difficulty": 3 },
+      { "theme": "Hidden colours", "words": ["Pinkie", "Greying", "Brownie", "Scarlett"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0018", "groups": [
+      { "theme": "Cheeses", "words": ["Halloumi", "Manchego", "Taleggio", "Roquefort"], "difficulty": 1 },
+      { "theme": "Archery terms", "words": ["Nock", "Fletching", "Quiver", "Bracer"], "difficulty": 2 },
+      { "theme": "Words meaning 'lively'", "words": ["Perky", "Sprightly", "Zesty", "Buoyant"], "difficulty": 3 },
+      { "theme": "___ light", "words": ["Moon", "Head", "Flash", "Green"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0019", "groups": [
+      { "theme": "Islands of Greece", "words": ["Naxos", "Paros", "Samos", "Hydra"], "difficulty": 1 },
+      { "theme": "Ballet positions and steps", "words": ["Plie", "Arabesque", "Jete", "Releve"], "difficulty": 2 },
+      { "theme": "Ways to say 'guess'", "words": ["Reckon", "Surmise", "Conjecture", "Presume"], "difficulty": 3 },
+      { "theme": "Mythical creatures as everyday words", "words": ["Titan", "Siren", "Harpy", "Chimera"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0020", "groups": [
+      { "theme": "Types of tea", "words": ["Oolong", "Rooibos", "Sencha", "Assam"], "difficulty": 1 },
+      { "theme": "Roof parts", "words": ["Eaves", "Gable", "Ridge", "Soffit"], "difficulty": 2 },
+      { "theme": "Words meaning 'thin layer'", "words": ["Veneer", "Film", "Patina", "Glaze"], "difficulty": 3 },
+      { "theme": "___ storm", "words": ["Brain", "Dust", "Fire", "Perfect"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0021", "groups": [
+      { "theme": "Whales and dolphins", "words": ["Beluga", "Narwhal", "Orca", "Minke"], "difficulty": 1 },
+      { "theme": "Parts of a violin", "words": ["Scroll", "Bridge", "Chin rest", "Fingerboard"], "difficulty": 2 },
+      { "theme": "Things that can be 'cracked'", "words": ["Code", "Knuckle", "Joke", "Whip"], "difficulty": 3 },
+      { "theme": "___ pit", "words": ["Cock", "Arm", "Fire", "Sand"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0022", "groups": [
+      { "theme": "Knitting stitches", "words": ["Purl", "Garter", "Rib", "Cable"], "difficulty": 1 },
+      { "theme": "Seas", "words": ["Adriatic", "Coral", "Barents", "Arafura"], "difficulty": 2 },
+      { "theme": "Words meaning 'clumsy'", "words": ["Gauche", "Inept", "Ungainly", "Lumbering"], "difficulty": 3 },
+      { "theme": "___ box", "words": ["Sand", "Match", "Chatter", "Ice"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0023", "groups": [
+      { "theme": "Citrus", "words": ["Bergamot", "Calamansi", "Kumquat", "Citron"], "difficulty": 1 },
+      { "theme": "Rhetorical devices", "words": ["Chiasmus", "Anaphora", "Litotes", "Zeugma"], "difficulty": 2 },
+      { "theme": "Things that have a 'crown'", "words": ["Tooth", "Tree", "Hat", "Road"], "difficulty": 3 },
+      { "theme": "___ stone", "words": ["Lime", "Key", "Corner", "Brim"], "difficulty": 4 } ] }
+  ]
+}

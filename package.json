@@ -66,7 +66,8 @@
     "check:i18n": "node scripts/check-i18n.mjs",
     "check:ui": "node scripts/check-ui-rules.mjs",
     "verify:device": "bash scripts/verify-app.sh",
-    "check:puzzles": "node scripts/check-puzzles.mjs"
+    "check:puzzles": "node scripts/check-puzzles.mjs && node scripts/build-feed.mjs --out build/feed-check",
+    "build:feed": "node scripts/build-feed.mjs"
   },
   "overrides": {
     "react-dom": "19.2.0"

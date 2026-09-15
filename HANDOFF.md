@@ -29,7 +29,7 @@ Portfolio rules: `Dev/AGENTS.md`, then `Dev/docs/agents/18-app-lifecycle.md`.
 | i18n completeness — 14 locales | ✅ |
 | UI rules — colour tokens, `t()` | ✅ |
 | iOS + Android bundle export | ✅ |
-| CI on a self-hosted runner | 🔨 running when this was written — re-check with `gh run list` |
+| CI on a self-hosted runner | ❌ failing on `main` — fix before anything else |
 | `check:release` with real identifiers | ✅ passes in CI |
 | Builds / launches on the iOS simulator | ⬜ |
 | Interaction driven on the Android emulator | ⬜ |
@@ -93,7 +93,7 @@ Changing a bundle id means deleting and recreating the RevenueCat app, which
 | IAP id / product | `6812277140` / `com.altixcode.wordflock.removeads` |
 
 All ten release identifiers plus `EXPO_TOKEN` are already GitHub repo secrets.
-Locally they come from `/Volumes/ExtremePro/Dev/.admob-ids/wordflock.env` —
+Locally they come from `/Volumes/ExtremePro/Dev/mobile_expo_apps/.admob-ids/wordflock.env` —
 never commit that file.
 
 ## Blocked on a person — cannot be scripted

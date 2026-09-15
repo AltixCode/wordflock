@@ -1,0 +1,5 @@
+{
+  "note": "Authored puzzles are assigned to days in file order from startsOn. Never reorder or remove a puzzle that has already been served -- that would change a day a player has already played and break a shared result.",
+  "startsOn": "2026-10-01",
+  "daysPerPack": 92
+}
