@@ -14,14 +14,28 @@ import { useTheme } from '@/theme';
  * everything. There is deliberately no plan picker — a second option would be a subscription,
  * and the portfolio does not sell those.
  */
-const BENEFITS = [
+const BENEFIT_KEYS = [
   { title: 'feat1Title', desc: 'feat1Desc' },
   { title: 'feat2Title', desc: 'feat2Desc' },
   { title: 'feat3Title', desc: 'feat3Desc' },
   { title: 'feat4Title', desc: 'feat4Desc' },
 ] as const;
 
+/**
+ * Only the claims this app can actually make.
+ *
+ * Four slots is what the template offers, not a quota to fill. An app whose
+ * purchase removes the ads and nothing else has one honest thing to say about
+ * it, and padding to four is how "Everything unlocked -- every level, every
+ * mode and the full archive" ends up on a paywall for an app with no levels,
+ * no modes and no archive. A benefit whose title is blank is dropped, so
+ * cutting a claim is a one-line edit in `i18n` rather than a component change.
+ */
+
 export default function Paywall() {
+  // Computed per render, not at module load: `t` resolves against the active
+  // locale, and a module-level filter would freeze the answer at import time.
+  const benefits = BENEFIT_KEYS.filter((b) => t(b.title).trim().length > 0);
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { colors, spacing, radius } = useTheme();
@@ -84,7 +98,7 @@ export default function Paywall() {
         </View>
 
         <View style={{ marginTop: spacing.xl, gap: spacing.lg }}>
-          {BENEFITS.map((benefit) => (
+          {benefits.map((benefit) => (
             <View key={benefit.title} style={{ flexDirection: 'row', gap: spacing.md }}>
               <Text variant="bodyStrong" tone="accent">
                 ✓

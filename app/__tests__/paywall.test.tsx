@@ -65,7 +65,17 @@ describe('Paywall', () => {
   it('lists what the purchase unlocks', async () => {
     const { getByText } = await renderWithProviders(<Paywall />);
     expect(getByText(t('feat1Title'))).toBeTruthy();
-    expect(getByText(t('feat4Desc'))).toBeTruthy();
+    expect(getByText(t('feat1Desc'))).toBeTruthy();
+  });
+
+  // Four slots is what the template offers, not a quota to fill. This app's
+  // purchase removes the ads and nothing else -- nothing in `src/` gates
+  // content on `isPremium` except the banner -- so the fourth claim is blank
+  // and must not be rendered as an empty row.
+  it('shows no row for a claim this app cannot honestly make', async () => {
+    expect(t('feat4Title')).toBe('');
+    const { queryByText } = await renderWithProviders(<Paywall />);
+    expect(queryByText('')).toBeNull();
   });
 
   it('closes itself for a user who already owns it', async () => {
