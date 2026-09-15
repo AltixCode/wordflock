@@ -294,42 +294,18 @@ jobs:
   build-android:
     name: Android Build & Package
     if: ${{ github.event_name == 'push' || inputs.platform == 'all' || inputs.platform == 'android' }}
-    # Linux, not macOS.
-    #
-    # This said the opposite, on the grounds that the Coolify host was
-    # "permanently busy serving deployments" so Android queued behind it
-    # indefinitely. That was worth re-testing rather than inheriting: no job in
-    # any of the 44 repos targets `[self-hosted, Linux, X64]` -- every
-    # self-hosted job asks for ARM64 or macOS -- so that runner was never busy,
-    # it was unmatchable, and its _work directory had never held a job.
-    #
-    # Nothing here is mac-specific: `setup-java` supplies the JDK on any
-    # platform and `setup-android` installs the SDK. Asking for macOS put
-    # Android in a queue with iOS for the only two machines that can sign an
-    # IPA -- and when Sarahs-Mac-mini dropped offline, that was the whole
-    # Android capacity too.
-    runs-on: ${{ github.event_name == 'workflow_dispatch' && inputs.android_runner == 'github-hosted' && 'ubuntu-24.04' || fromJSON('["self-hosted", "Linux", "X64"]') }}
+    # macOS, not Linux. The only self-hosted `linux, x64` runner is the Coolify
+    # host, which is permanently busy serving deployments, so every Android job
+    # queued behind it indefinitely while three macOS runners sat idle. Nothing
+    # here needs Linux: `setup-java` supplies JDK 17 on any platform, and
+    # `setup-android` installs the SDK itself.
+    runs-on: ${{ github.event_name == 'workflow_dispatch' && inputs.android_runner == 'github-hosted' && 'ubuntu-24.04' || fromJSON('["self-hosted", "macOS", "ARM64"]') }}
     outputs:
       app_name: ${{ steps.version.outputs.app_name }}
       app_version: ${{ steps.version.outputs.app_version }}
       app_build: ${{ steps.version.outputs.app_build }}
       tag_name: ${{ steps.version.outputs.tag_name }}
     steps:
-      - name: Refuse to build if the host is short of disk
-        # This runner shares a host with the production Coolify estate -- 36
-        # containers -- and that host filled its own disk on 2026-09-13 and was
-        # stopped for it. A full disk 404s every site on it. An Android build
-        # pulls the SDK, Gradle caches and node_modules, which is precisely the
-        # workload that would do it again, so fail the build instead. Losing a
-        # build costs a re-run; losing the websites does not.
-        run: |
-          free_gb=$(df -BG --output=avail / | tail -1 | tr -dc '0-9')
-          echo "free on host: ${free_gb}G"
-          if [ "${free_gb:-0}" -lt 15 ]; then
-            echo "::error::only ${free_gb}G free on the Coolify host — refusing to build"
-            exit 1
-          fi
-
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
