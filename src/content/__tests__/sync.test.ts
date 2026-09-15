@@ -128,3 +128,31 @@ it('survives a feed that answers with an HTTP error', async () => {
   expect(result.feedReachable).toBe(false);
   expect(result.problems.join(' ')).toContain('503');
 });
+
+// Authoring more puzzles extends the trailing pack, which changes its id --
+// `2026-10-01_2026-10-23` becomes `2026-10-01_2026-11-15`. A device holding the
+// old one must pick up the replacement, or it runs out on the day the old pack
+// ends while the feed has weeks more. The ids differ, so `packsToFetch` treats
+// it as new; this pins that, because an id scheme that kept the name stable
+// would silently strand every existing install.
+it('picks up an extended pack even though it already holds the shorter one', async () => {
+  const short = { id: 'oct', from: '2026-10-01', to: '2026-10-15', puzzles: days('2026-10-01', '2026-10-15') };
+  install(serve({
+    'manifest.json': { schema: FEED_SCHEMA, servedThrough: '2026-10-15',
+                       packs: [{ id: 'oct', from: '2026-10-01', to: '2026-10-15', path: 'packs/oct.json' }] },
+    'packs/oct.json': short,
+  }));
+  await syncContent(0, '2026-10-01');
+  expect((await heldRange('2026-10-01')).coveredThrough).toBe('2026-10-15');
+
+  const longer = { id: 'oct-nov', from: '2026-10-01', to: '2026-10-31', puzzles: days('2026-10-01', '2026-10-31') };
+  install(serve({
+    'manifest.json': { schema: FEED_SCHEMA, servedThrough: '2026-10-31',
+                       packs: [{ id: 'oct-nov', from: '2026-10-01', to: '2026-10-31', path: 'packs/oct-nov.json' }] },
+    'packs/oct-nov.json': longer,
+  }));
+  // A day later, so the manifest is stale enough to be re-read.
+  const result = await syncContent(13 * 60 * 60 * 1000, '2026-10-02');
+  expect(result.packsAdded).toEqual(['oct-nov']);
+  expect((await heldRange('2026-10-02')).coveredThrough).toBe('2026-10-31');
+});

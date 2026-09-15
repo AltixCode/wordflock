@@ -1,0 +1,142 @@
+{
+  "note": "Second authored batch. Order is the serving order and must never change once published.",
+  "puzzles": [
+    { "id": "wf-f0024", "groups": [
+      { "theme": "Types of boat", "words": ["Dinghy", "Schooner", "Ketch", "Trawler"], "difficulty": 1 },
+      { "theme": "Elements discovered by Curie", "words": ["Radium", "Polonium", "Thorium", "Uranium"], "difficulty": 2 },
+      { "theme": "Ways to say 'reduce'", "words": ["Pare", "Whittle", "Curtail", "Abate"], "difficulty": 3 },
+      { "theme": "___ post", "words": ["Lamp", "Goal", "Bed", "Out"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0025", "groups": [
+      { "theme": "Owls", "words": ["Barn", "Tawny", "Snowy", "Scops"], "difficulty": 1 },
+      { "theme": "Italian cities", "words": ["Bologna", "Verona", "Siena", "Bari"], "difficulty": 2 },
+      { "theme": "Things with a spine", "words": ["Book", "Cactus", "Hedgehog", "Mackerel"], "difficulty": 3 },
+      { "theme": "___ worm", "words": ["Tape", "Silk", "Glow", "Ear"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0026", "groups": [
+      { "theme": "Brass instruments", "words": ["Tuba", "Cornet", "Flugelhorn", "Sousaphone"], "difficulty": 1 },
+      { "theme": "Types of fog", "words": ["Advection", "Radiation", "Freezing", "Valley"], "difficulty": 2 },
+      { "theme": "Words meaning 'sudden'", "words": ["Abrupt", "Precipitate", "Sharp", "Snap"], "difficulty": 3 },
+      { "theme": "___ pipe", "words": ["Bag", "Wind", "Pan", "Drain"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0027", "groups": [
+      { "theme": "Fabric weaves", "words": ["Twill", "Herringbone", "Poplin", "Jacquard"], "difficulty": 1 },
+      { "theme": "Types of eclipse", "words": ["Annular", "Partial", "Penumbral", "Hybrid"], "difficulty": 2 },
+      { "theme": "Ways to say 'obvious'", "words": ["Blatant", "Patent", "Manifest", "Glaring"], "difficulty": 3 },
+      { "theme": "___ belt", "words": ["Seat", "Fan", "Rust", "Green"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0028", "groups": [
+      { "theme": "Apples", "words": ["Braeburn", "Cox", "Russet", "Discovery"], "difficulty": 1 },
+      { "theme": "Printing presses and type", "words": ["Letterpress", "Intaglio", "Lithography", "Gravure"], "difficulty": 2 },
+      { "theme": "Things a river does", "words": ["Meander", "Flood", "Silt", "Ford"], "difficulty": 3 },
+      { "theme": "___ berry", "words": ["Straw", "Goose", "Elder", "Logan"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0029", "groups": [
+      { "theme": "Ancient wonders", "words": ["Colossus", "Mausoleum", "Pharos", "Artemision"], "difficulty": 1 },
+      { "theme": "Sauces", "words": ["Hollandaise", "Velouté", "Espagnole", "Béchamel"], "difficulty": 2 },
+      { "theme": "Words meaning 'wander'", "words": ["Rove", "Roam", "Gad", "Straggle"], "difficulty": 3 },
+      { "theme": "___ fly", "words": ["Butter", "Dragon", "Fire", "May"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0030", "groups": [
+      { "theme": "Rooms in a castle", "words": ["Keep", "Solar", "Garderobe", "Buttery"], "difficulty": 1 },
+      { "theme": "Types of pastry", "words": ["Choux", "Filo", "Rough puff", "Shortcrust"], "difficulty": 2 },
+      { "theme": "Ways to say 'quiet'", "words": ["Hushed", "Muted", "Subdued", "Still"], "difficulty": 3 },
+      { "theme": "___ fall", "words": ["Water", "Wind", "Night", "Pit"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0031", "groups": [
+      { "theme": "Bones", "words": ["Femur", "Clavicle", "Scapula", "Sternum"], "difficulty": 1 },
+      { "theme": "Rivers of Africa", "words": ["Limpopo", "Zambezi", "Orange", "Volta"], "difficulty": 2 },
+      { "theme": "Things a door can be", "words": ["Ajar", "Bolted", "Revolving", "Sliding"], "difficulty": 3 },
+      { "theme": "___ nut", "words": ["Dough", "Chest", "Wing", "Hazel"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0032", "groups": [
+      { "theme": "Card suits and ranks", "words": ["Clubs", "Spades", "Jack", "Deuce"], "difficulty": 1 },
+      { "theme": "Types of telescope", "words": ["Refractor", "Reflector", "Catadioptric", "Radio"], "difficulty": 2 },
+      { "theme": "Ways to say 'agree'", "words": ["Assent", "Concur", "Accede", "Consent"], "difficulty": 3 },
+      { "theme": "___ dog", "words": ["Under", "Hot", "Bull", "Sheep"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0033", "groups": [
+      { "theme": "Winds", "words": ["Mistral", "Sirocco", "Chinook", "Harmattan"], "difficulty": 1 },
+      { "theme": "Parts of a shoe", "words": ["Welt", "Vamp", "Counter", "Eyelet"], "difficulty": 2 },
+      { "theme": "Words meaning 'rough'", "words": ["Coarse", "Craggy", "Gritty", "Rugged"], "difficulty": 3 },
+      { "theme": "___ paper", "words": ["Wall", "Sand", "News", "Fly"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0034", "groups": [
+      { "theme": "Reptiles", "words": ["Gecko", "Skink", "Terrapin", "Caiman"], "difficulty": 1 },
+      { "theme": "Types of arch", "words": ["Lancet", "Ogee", "Trefoil", "Segmental"], "difficulty": 2 },
+      { "theme": "Ways to say 'a lot'", "words": ["Oodles", "Heaps", "Scads", "Reams"], "difficulty": 3 },
+      { "theme": "___ walk", "words": ["Cat", "Board", "Jay", "Side"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0035", "groups": [
+      { "theme": "Spices", "words": ["Cardamom", "Fenugreek", "Asafoetida", "Mace"], "difficulty": 1 },
+      { "theme": "Units of measure", "words": ["Furlong", "Fathom", "Hectare", "Chain"], "difficulty": 2 },
+      { "theme": "Ways to say 'pretend'", "words": ["Feign", "Affect", "Simulate", "Sham"], "difficulty": 3 },
+      { "theme": "___ ring", "words": ["Ear", "Onion", "Boxing", "Key"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0036", "groups": [
+      { "theme": "Trees", "words": ["Rowan", "Hornbeam", "Sycamore", "Blackthorn"], "difficulty": 1 },
+      { "theme": "Japanese art forms", "words": ["Ikebana", "Kintsugi", "Origami", "Shodo"], "difficulty": 2 },
+      { "theme": "Words meaning 'gap'", "words": ["Hiatus", "Lacuna", "Breach", "Interval"], "difficulty": 3 },
+      { "theme": "___ print", "words": ["Blue", "Foot", "News", "Finger"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0037", "groups": [
+      { "theme": "Seabirds", "words": ["Gannet", "Petrel", "Skua", "Guillemot"], "difficulty": 1 },
+      { "theme": "Types of lens", "words": ["Convex", "Fisheye", "Telephoto", "Macro"], "difficulty": 2 },
+      { "theme": "Ways to say 'delay'", "words": ["Stall", "Defer", "Tarry", "Dawdle"], "difficulty": 3 },
+      { "theme": "___ watch", "words": ["Stop", "Night", "Wrist", "Neighbourhood"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0038", "groups": [
+      { "theme": "Rock types", "words": ["Basalt", "Gneiss", "Shale", "Pumice"], "difficulty": 1 },
+      { "theme": "Ways of cooking eggs", "words": ["Coddled", "Shirred", "Poached", "Basted"], "difficulty": 2 },
+      { "theme": "Words meaning 'praise'", "words": ["Laud", "Extol", "Acclaim", "Commend"], "difficulty": 3 },
+      { "theme": "___ break", "words": ["Day", "Heart", "Out", "Tie"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0039", "groups": [
+      { "theme": "Moons of the solar system", "words": ["Europa", "Titan", "Triton", "Callisto"], "difficulty": 1 },
+      { "theme": "Types of beard", "words": ["Goatee", "Vandyke", "Mutton chops", "Soul patch"], "difficulty": 2 },
+      { "theme": "Ways to say 'weaken'", "words": ["Sap", "Erode", "Enfeeble", "Undermine"], "difficulty": 3 },
+      { "theme": "___ over", "words": ["Hang", "Left", "Push", "Take"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0040", "groups": [
+      { "theme": "Fish", "words": ["Turbot", "Bream", "Pollock", "Grayling"], "difficulty": 1 },
+      { "theme": "Ballet companies' home cities", "words": ["Milan", "Moscow", "Copenhagen", "Havana"], "difficulty": 2 },
+      { "theme": "Ways to say 'thorough'", "words": ["Exhaustive", "Rigorous", "Painstaking", "Searching"], "difficulty": 3 },
+      { "theme": "___ side", "words": ["Country", "Sea", "Broad", "Flip"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0041", "groups": [
+      { "theme": "Cocktails", "words": ["Negroni", "Sidecar", "Daiquiri", "Sazerac"], "difficulty": 1 },
+      { "theme": "Parts of a bicycle", "words": ["Derailleur", "Chainstay", "Bottom bracket", "Headset"], "difficulty": 2 },
+      { "theme": "Words meaning 'beginner'", "words": ["Novice", "Tyro", "Neophyte", "Greenhorn"], "difficulty": 3 },
+      { "theme": "___ pool", "words": ["Car", "Whirl", "Liver", "Gene"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0042", "groups": [
+      { "theme": "Types of cloud forest plant", "words": ["Bromeliad", "Orchid", "Fern", "Liverwort"], "difficulty": 1 },
+      { "theme": "Chess pieces in other languages", "words": ["Dame", "Turm", "Läufer", "Bauer"], "difficulty": 2 },
+      { "theme": "Ways to say 'destroy'", "words": ["Raze", "Quash", "Scupper", "Demolish"], "difficulty": 3 },
+      { "theme": "___ hole", "words": ["Loop", "Man", "Pot", "Water"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0043", "groups": [
+      { "theme": "Dog breeds", "words": ["Vizsla", "Weimaraner", "Papillon", "Saluki"], "difficulty": 1 },
+      { "theme": "Types of bridge in music", "words": ["Middle eight", "Coda", "Refrain", "Vamp"], "difficulty": 2 },
+      { "theme": "Ways to say 'strange'", "words": ["Uncanny", "Outlandish", "Singular", "Rum"], "difficulty": 3 },
+      { "theme": "___ guard", "words": ["Body", "Life", "Van", "Mud"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0044", "groups": [
+      { "theme": "Countries with a red-and-white flag", "words": ["Austria", "Denmark", "Poland", "Peru"], "difficulty": 1 },
+      { "theme": "Blacksmith's tools", "words": ["Anvil", "Tongs", "Swage", "Quench tank"], "difficulty": 2 },
+      { "theme": "Words meaning 'polite'", "words": ["Civil", "Courteous", "Genteel", "Decorous"], "difficulty": 3 },
+      { "theme": "___ up", "words": ["Wash", "Give", "Round", "Shake"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0045", "groups": [
+      { "theme": "Stringed instruments", "words": ["Sitar", "Oud", "Balalaika", "Bouzouki"], "difficulty": 1 },
+      { "theme": "Layers of the Earth", "words": ["Crust", "Mantle", "Asthenosphere", "Core"], "difficulty": 2 },
+      { "theme": "Ways to say 'refuse'", "words": ["Decline", "Rebuff", "Spurn", "Baulk"], "difficulty": 3 },
+      { "theme": "___ way", "words": ["Drive", "Stair", "Gate", "Cause"], "difficulty": 4 } ] },
+
+    { "id": "wf-f0046", "groups": [
+      { "theme": "Beetles", "words": ["Weevil", "Chafer", "Firefly", "Ladybird"], "difficulty": 1 },
+      { "theme": "Bookbinding terms", "words": ["Signature", "Endpaper", "Headband", "Deckle"], "difficulty": 2 },
+      { "theme": "Ways to say 'shorten'", "words": ["Abridge", "Truncate", "Elide", "Crop"], "difficulty": 3 },
+      { "theme": "___ book", "words": ["Note", "Log", "Face", "Match"], "difficulty": 4 } ] }
+  ]
+}
