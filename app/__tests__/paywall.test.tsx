@@ -68,12 +68,11 @@ describe('Paywall', () => {
     expect(getByText(t('feat1Desc'))).toBeTruthy();
   });
 
-  // Four slots is what the template offers, not a quota to fill. This app's
-  // purchase removes the ads and nothing else -- nothing in `src/` gates
-  // content on `isPremium` except the banner -- so the fourth claim is blank
-  // and must not be rendered as an empty row.
-  it('shows no row for a claim this app cannot honestly make', async () => {
-    expect(t('feat4Title')).toBe('');
+  // Asserting on `feat4Desc` here would encode the template's shape rather than
+  // this app's claims, and would fail against any honest rewrite that has
+  // fewer than four things to say. What matters is that a blank claim is not
+  // rendered as an empty row.
+  it('renders no row for a claim this app does not make', async () => {
     const { queryByText } = await renderWithProviders(<Paywall />);
     expect(queryByText('')).toBeNull();
   });

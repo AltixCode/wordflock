@@ -21,20 +21,20 @@ const BENEFIT_KEYS = [
   { title: 'feat4Title', desc: 'feat4Desc' },
 ] as const;
 
-/**
- * Only the claims this app can actually make.
- *
- * Four slots is what the template offers, not a quota to fill. An app whose
- * purchase removes the ads and nothing else has one honest thing to say about
- * it, and padding to four is how "Everything unlocked -- every level, every
- * mode and the full archive" ends up on a paywall for an app with no levels,
- * no modes and no archive. A benefit whose title is blank is dropped, so
- * cutting a claim is a one-line edit in `i18n` rather than a component change.
- */
-
 export default function Paywall() {
-  // Computed per render, not at module load: `t` resolves against the active
-  // locale, and a module-level filter would freeze the answer at import time.
+  /**
+   * Only the claims this app can actually make.
+   *
+   * Four slots is what this template offers, not a quota to fill. An app whose
+   * purchase removes the ads and nothing else has one honest thing to say about
+   * it, and padding to four is how "Everything unlocked -- every level, every
+   * mode and the full archive" ends up on a paywall for an app with no levels,
+   * no modes and no archive.
+   *
+   * A benefit whose title is blank is dropped, so cutting a claim is a one-line
+   * edit in `i18n` rather than a component change. Computed per render, not at
+   * module load, so it follows the active locale.
+   */
   const benefits = BENEFIT_KEYS.filter((b) => t(b.title).trim().length > 0);
   const router = useRouter();
   const insets = useSafeAreaInsets();
