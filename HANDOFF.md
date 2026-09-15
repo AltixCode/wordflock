@@ -12,9 +12,12 @@ Portfolio rules: `Dev/AGENTS.md`, then `Dev/docs/agents/18-app-lifecycle.md`.
 | | |
 |---|---|
 | Stage | **Scaffold only** — the game is not written |
-| Tests | 186 passing |
+| Tests | 264 passing |
 | Device pass | ⬜ never run |
+| App Store | metadata, IAP, price, availability and privacy all done; needs screens and content |
 | Released | ⬜ no |
+
+> **Logic layer done (puzzle validation, guess rules, daily mapping, share grid). The puzzle bank is 30 entries — one month — which repeats monthly and is NOT shippable as a daily. Screens not built.**
 
 ## Verification state
 
@@ -22,7 +25,7 @@ Portfolio rules: `Dev/AGENTS.md`, then `Dev/docs/agents/18-app-lifecycle.md`.
 |---|---|
 | Lint | ✅ |
 | Typecheck | ✅ |
-| Unit tests (186) | ✅ |
+| Unit tests (264) | ✅ |
 | i18n completeness — 14 locales | ✅ |
 | UI rules — colour tokens, `t()` | ✅ |
 | iOS + Android bundle export | ✅ |
@@ -38,7 +41,7 @@ Portfolio rules: `Dev/AGENTS.md`, then `Dev/docs/agents/18-app-lifecycle.md`.
 
 **Only the shared scaffold. No game exists yet.**
 
-What the scaffold already gives you, working and tested (186 tests):
+What the scaffold already gives you, working and tested (264 tests):
 
 - expo-router shell: home placeholder, settings, paywall
 - 14 locales with plural and RTL handling, and `check-i18n` / `check-ui-rules`
