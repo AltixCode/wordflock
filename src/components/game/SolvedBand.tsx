@@ -3,7 +3,11 @@ import { View } from 'react-native';
 
 import { Text } from '@/components/ui';
 import type { Group } from '@/logic/puzzle';
-import { difficultyColors, radius, spacing, useTheme } from '@/theme';
+import { radius, spacing, useTheme } from '@/theme';
+// Imported from its own module rather than through `@/theme`'s barrel: that
+// barrel is generated from `_shared/_template` and re-rendering it silently
+// drops any export added here -- which is exactly what happened once already.
+import { difficultyColors } from '@/theme/difficulty';
 
 /**
  * A group the player has found, or one revealed after the fourth mistake.

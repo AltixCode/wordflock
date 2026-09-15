@@ -11,9 +11,14 @@ import { dayIndex, todayKey, type DateKey } from '@/logic/dateKey';
 import { applyGuess, startSession, type GuessOutcome, type Session } from '@/logic/guess';
 import { WORDS_PER_GROUP } from '@/logic/puzzle';
 import { makeRng, shuffled } from '@/logic/rng';
+import { shouldShowInterstitial } from '@/monetization/adPolicy';
+import { shouldShowAds } from '@/monetization/entitlements';
+import { showInterstitial } from '@/monetization/interstitial';
 import { loadSession, saveSession } from '@/game/persist';
+import { usePremiumStore } from './usePremiumStore';
 
 const INSTALLED_KEY = 'wordflock.installedOn.v1';
+const PACING_KEY = 'wordflock.adPacing.v1';
 
 /**
  * `unavailable` is a real, reachable state, not an error: the player is offline
@@ -68,6 +73,67 @@ async function installedOn(today: DateKey): Promise<DateKey> {
     // Storage is unavailable; today is still the honest answer.
   }
   return today;
+}
+
+interface AdPacing {
+  /** Puzzles carried to a result, won or lost. */
+  completed: number;
+  lastInterstitialAt: number;
+}
+
+const NO_PACING: AdPacing = { completed: 0, lastInterstitialAt: 0 };
+
+async function readPacing(): Promise<AdPacing> {
+  try {
+    const raw = await AsyncStorage.getItem(PACING_KEY);
+    if (raw === null) return NO_PACING;
+    const parsed = JSON.parse(raw) as Partial<AdPacing>;
+    return {
+      completed: typeof parsed.completed === 'number' ? parsed.completed : 0,
+      lastInterstitialAt:
+        typeof parsed.lastInterstitialAt === 'number' ? parsed.lastInterstitialAt : 0,
+    };
+  } catch {
+    return NO_PACING;
+  }
+}
+
+/**
+ * The interstitial, at the one moment this game has: the day's puzzle ending.
+ *
+ * The count is persisted, which is the whole point. Wordflock is played once a
+ * day, so a counter that lived in memory would reset before it ever reached
+ * `MIN_GAMES_BEFORE_FIRST_INTERSTITIAL` and the ad would never appear -- while
+ * the paywall went on selling its removal. Six sibling apps hand the policy a
+ * literal `gamesPlayed: 1` and have exactly that bug; `adPolicy`'s own unit
+ * test passes in every one of them, because the defect is in the call site.
+ */
+async function noteCompletedPuzzle(): Promise<void> {
+  const pacing = await readPacing();
+  const next: AdPacing = { ...pacing, completed: pacing.completed + 1 };
+  const now = Date.now();
+
+  const { isPremium, isReady } = usePremiumStore.getState();
+  const show =
+    shouldShowAds({ isPremium, isReady }) &&
+    shouldShowInterstitial({
+      gamesPlayed: next.completed,
+      lastInterstitialAt: next.lastInterstitialAt,
+      now,
+      adsRemoved: isPremium,
+    });
+
+  // Recorded only when one was actually put on screen: a failed fill must not
+  // start the 90-second clock, or a genuine ad is skipped later for one that
+  // never appeared.
+  if (show && showInterstitial()) next.lastInterstitialAt = now;
+
+  try {
+    await AsyncStorage.setItem(PACING_KEY, JSON.stringify(next));
+  } catch {
+    // Pacing is a nicety; losing it must never fail the guess that ended the
+    // puzzle, which has already been saved.
+  }
 }
 
 async function isOnline(): Promise<boolean> {
@@ -153,7 +219,11 @@ export const useGameStore = create<GameState>((set, get) => ({
     // stays put for the player to fix rather than being wiped for them.
     const scored = outcome.kind !== 'invalid' && outcome.kind !== 'finished';
     set({ session: next, lastOutcome: outcome, ...(scored ? { selection: [] } : {}) });
-    if (scored) await saveSession(key, next);
+    if (!scored) return;
+    await saveSession(key, next);
+    // The transition, not the state: a restored finished session must not be
+    // counted again every time the player reopens the app.
+    if (session.status === 'playing' && next.status !== 'playing') await noteCompletedPuzzle();
   },
 
   resetForTests: () => set({ ...INITIAL }),
