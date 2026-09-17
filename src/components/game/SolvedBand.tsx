@@ -3,7 +3,7 @@ import { View } from 'react-native';
 
 import { Text } from '@/components/ui';
 import type { Group } from '@/logic/puzzle';
-import { radius, spacing, useTheme } from '@/theme';
+import { useTheme } from '@/theme';
 // Imported from its own module rather than through `@/theme`'s barrel: that
 // barrel is generated from `_shared/_template` and re-rendering it silently
 // drops any export added here -- which is exactly what happened once already.
@@ -17,7 +17,10 @@ import { difficultyColors } from '@/theme/difficulty';
  * words it meant.
  */
 export function SolvedBand({ group }: { group: Group }) {
-  const { colors } = useTheme();
+  // spacing and radius come off the theme, not the raw tokens: the theme scales
+  // them on a tablet and the module does not, so importing the module directly
+  // left these two components at phone rhythm inside screens that had grown.
+  const { colors, spacing, radius } = useTheme();
   const tone = difficultyColors(colors)[group.difficulty];
 
   return (

@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { Text } from '@/components/ui';
 import { t } from '@/i18n';
 import { MISTAKES_ALLOWED } from '@/logic/puzzle';
-import { spacing, useTheme } from '@/theme';
+import { useTheme } from '@/theme';
 
 /**
  * How many mistakes are left, as dots.
@@ -14,7 +14,8 @@ import { spacing, useTheme } from '@/theme';
  * losing" is the single most important number on this screen.
  */
 export function MistakeDots({ left }: { left: number }) {
-  const { colors } = useTheme();
+  // See SolvedBand: spacing off the theme so the tablet scale reaches it.
+  const { colors, spacing } = useTheme();
   const remaining = Math.max(0, Math.min(MISTAKES_ALLOWED, left));
 
   return (
