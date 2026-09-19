@@ -1,0 +1,35 @@
+{
+  "identifier": "6BE6B683-AF06-4A5D-8A64-1681EEF5BEF0",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "4.99",
+      "familyShareable": false,
+      "internalID": "C580B93E-0049-42C6-93D6-FE2EFDDA6AAE",
+      "localizations": [
+        {
+          "description": "wordflock remove ads lifetime unlock",
+          "displayName": "wordflock remove ads",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "com.altixcode.wordflock.removeads",
+      "referenceName": "wordflock remove ads",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {
+    "_applicationInternalID": "",
+    "_developerTeamID": "",
+    "_failTransactionsEnabled": false,
+    "_lastSynchronizedDate": 0,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_storeKitErrors": []
+  },
+  "subscriptionGroups": [],
+  "version": {
+    "major": 4,
+    "minor": 0
+  }
+}
