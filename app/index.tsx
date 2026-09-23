@@ -1,16 +1,16 @@
-import { useRouter } from 'expo-router';
-import React, { useEffect, useMemo } from 'react';
-import { ActivityIndicator, Share, View } from 'react-native';
+import { useRouter } from "expo-router";
+import React, { useEffect, useMemo } from "react";
+import { ActivityIndicator, Share, View } from "react-native";
 
-import { BannerAdSlot } from '@/components/BannerAdSlot';
-import { MistakeDots, SolvedBand, WordTile } from '@/components/game';
-import { Button, IconButton, Screen, Text } from '@/components/ui';
-import { t } from '@/i18n';
-import { guessRows, mistakesLeft, unsolvedGroups } from '@/logic/guess';
-import { GROUPS_PER_PUZZLE, WORDS_PER_GROUP, type Group } from '@/logic/puzzle';
-import { shareText } from '@/logic/share';
-import { useGameStore } from '@/store/useGameStore';
-import { useTheme } from '@/theme';
+import { BannerAdSlot } from "@/components/BannerAdSlot";
+import { MistakeDots, SolvedBand, WordTile } from "@/components/game";
+import { Button, IconButton, Screen, Text } from "@/components/ui";
+import { t } from "@/i18n";
+import { guessRows, mistakesLeft, unsolvedGroups } from "@/logic/guess";
+import { GROUPS_PER_PUZZLE, WORDS_PER_GROUP, type Group } from "@/logic/puzzle";
+import { shareText } from "@/logic/share";
+import { useGameStore } from "@/store/useGameStore";
+import { useTheme } from "@/theme";
 
 /** The board is four across, which is what makes a row a candidate group. */
 const COLUMNS = WORDS_PER_GROUP;
@@ -23,16 +23,23 @@ function Feedback() {
   // dot going out, and repeating it in words adds nothing; "correct" is told by
   // the band appearing.
   const message =
-    outcome?.kind === 'oneAway'
-      ? t('oneAway')
-      : outcome?.kind === 'invalid' && outcome.reason === 'repeat'
-        ? t('alreadyGuessed')
+    outcome?.kind === "oneAway"
+      ? t("oneAway")
+      : outcome?.kind === "invalid" && outcome.reason === "repeat"
+        ? t("alreadyGuessed")
         : null;
 
   return (
-    <View style={{ minHeight: 24, justifyContent: 'center', marginTop: spacing.sm }}>
+    <View
+      style={{ minHeight: 24, justifyContent: "center", marginTop: spacing.sm }}
+    >
       {message ? (
-        <Text variant="caption" tone="accent" align="center" accessibilityLiveRegion="polite">
+        <Text
+          variant="caption"
+          tone="accent"
+          align="center"
+          accessibilityLiveRegion="polite"
+        >
           {message}
         </Text>
       ) : null}
@@ -49,14 +56,14 @@ function Unavailable() {
   // one "something went wrong": the player's connection, our server, and the
   // feed having no puzzle for a day yet. Only the first is theirs to fix.
   const [title, body] =
-    shortfall?.kind === 'offline'
-      ? [t('offlineTitle'), t('offlineBody')]
-      : shortfall?.kind === 'exhausted'
-        ? [t('exhaustedTitle'), t('exhaustedBody')]
-        : [t('feedUnavailableTitle'), t('feedUnavailableBody')];
+    shortfall?.kind === "offline"
+      ? [t("offlineTitle"), t("offlineBody")]
+      : shortfall?.kind === "exhausted"
+        ? [t("exhaustedTitle"), t("exhaustedBody")]
+        : [t("feedUnavailableTitle"), t("feedUnavailableBody")];
 
   return (
-    <View style={{ paddingVertical: spacing['3xl'], gap: spacing.md }}>
+    <View style={{ paddingVertical: spacing["3xl"], gap: spacing.md }}>
       <Text variant="title" align="center">
         {title}
       </Text>
@@ -64,7 +71,7 @@ function Unavailable() {
         {body}
       </Text>
       <Button
-        label={t('retry')}
+        label={t("retry")}
         variant="secondary"
         onPress={() => void load()}
         style={{ marginTop: spacing.base }}
@@ -89,10 +96,10 @@ export default function Home() {
   const clearSelection = useGameStore((s) => s.clearSelection);
 
   useEffect(() => {
-    if (useGameStore.getState().phase === 'idle') void load();
+    if (useGameStore.getState().phase === "idle") void load();
   }, [load]);
 
-  const finished = session !== null && session.status !== 'playing';
+  const finished = session !== null && session.status !== "playing";
 
   /**
    * The bands to show, in the order they were found, with any unfound group
@@ -110,13 +117,14 @@ export default function Home() {
   }, [session, finished]);
 
   const onShare = () => {
-    if (session === null || key === null || session.status === 'playing') return;
+    if (session === null || key === null || session.status === "playing")
+      return;
     const text = shareText({
       key,
       puzzleNumber,
       rows: guessRows(session),
       status: session.status,
-      title: t('appName'),
+      title: t("appName"),
     });
     if (text !== null) void Share.share({ message: text });
   };
@@ -126,40 +134,55 @@ export default function Home() {
       <Screen scroll topInset>
         <View
           style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
             marginTop: spacing.lg,
           }}
         >
           <View style={{ flex: 1 }}>
-            <Text variant="title">{t('todayTitle')}</Text>
-            {phase === 'ready' ? (
+            <Text variant="title">{t("todayTitle")}</Text>
+            {phase === "ready" ? (
               <Text variant="caption" tone="muted" style={{ marginTop: 2 }}>
-                {t('groupsFound', { n: String(session?.solved.length ?? 0) })}
+                {t("groupsFound", { n: String(session?.solved.length ?? 0) })}
               </Text>
             ) : null}
           </View>
           <IconButton
             icon="settings"
-            accessibilityLabel={t('settingsTitle')}
-            onPress={() => router.push('/settings')}
+            accessibilityLabel={t("settingsTitle")}
+            onPress={() => router.push("/settings")}
           />
         </View>
 
-        {phase === 'loading' || phase === 'idle' ? (
-          <View style={{ paddingVertical: spacing['4xl'], alignItems: 'center' }}>
+        {phase === "loading" || phase === "idle" ? (
+          <View
+            style={{ paddingVertical: spacing["4xl"], alignItems: "center" }}
+          >
             <ActivityIndicator color={colors.textMuted} />
-            <Text variant="caption" tone="muted" style={{ marginTop: spacing.md }}>
-              {t('loading')}
+            <Text
+              variant="caption"
+              tone="muted"
+              style={{ marginTop: spacing.md }}
+            >
+              {t("loading")}
             </Text>
           </View>
         ) : null}
 
-        {phase === 'unavailable' ? <Unavailable /> : null}
+        {phase === "unavailable" ? <Unavailable /> : null}
 
-        {phase === 'ready' && session !== null ? (
+        {phase === "ready" && session !== null ? (
           <View style={{ marginTop: spacing.lg, gap: spacing.sm }}>
+            {/* The one instruction the player needs before touching a tile
+                belongs above the grid, not buried below the submit button
+                where testers reported it read as an afterthought. */}
+            {!finished ? (
+              <Text variant="caption" tone="faint" align="center">
+                {t("pickFour")}
+              </Text>
+            ) : null}
+
             {bands.map((group) => (
               <SolvedBand key={group.theme} group={group} />
             ))}
@@ -167,11 +190,21 @@ export default function Home() {
             {/* A wrapping row rather than a FlatList: sixteen tiles that must
                 all be on screen at once, where virtualisation would only add
                 measurement passes and a scroll the game does not want. */}
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm }}>
+            <View
+              style={{
+                flexDirection: "row",
+                flexWrap: "wrap",
+                gap: spacing.sm,
+              }}
+            >
               {session.board.map((word) => (
                 <View
                   key={word}
-                  style={{ width: `${100 / COLUMNS}%`, flexBasis: `${100 / COLUMNS}%`, flexGrow: 1 }}
+                  style={{
+                    width: `${100 / COLUMNS}%`,
+                    flexBasis: `${100 / COLUMNS}%`,
+                    flexGrow: 1,
+                  }}
                 >
                   <WordTile
                     word={word}
@@ -188,25 +221,35 @@ export default function Home() {
             {finished ? (
               <View style={{ gap: spacing.md, marginTop: spacing.base }}>
                 <Text variant="heading" align="center">
-                  {session.status === 'won' ? t('wonTitle') : t('lostTitle')}
+                  {session.status === "won" ? t("wonTitle") : t("lostTitle")}
                 </Text>
-                <Button label={t('shareResult')} icon="share" onPress={onShare} fullWidth />
+                <Button
+                  label={t("shareResult")}
+                  icon="share"
+                  onPress={onShare}
+                  fullWidth
+                />
                 <Text variant="caption" tone="muted" align="center">
-                  {t('comeBackTomorrow')}
+                  {t("comeBackTomorrow")}
                 </Text>
               </View>
             ) : (
               <View style={{ gap: spacing.md, marginTop: spacing.base }}>
-                <View style={{ alignItems: 'center' }}>
+                <View style={{ alignItems: "center" }}>
                   <MistakeDots left={mistakesLeft(session)} />
                 </View>
-                <View style={{ flexDirection: 'row', gap: spacing.sm }}>
+                <View style={{ flexDirection: "row", gap: spacing.sm }}>
                   <View style={{ flex: 1 }}>
-                    <Button label={t('shuffle')} variant="secondary" onPress={shuffle} fullWidth />
+                    <Button
+                      label={t("shuffle")}
+                      variant="secondary"
+                      onPress={shuffle}
+                      fullWidth
+                    />
                   </View>
                   <View style={{ flex: 1 }}>
                     <Button
-                      label={t('deselect')}
+                      label={t("deselect")}
                       variant="ghost"
                       disabled={selection.length === 0}
                       onPress={clearSelection}
@@ -215,7 +258,7 @@ export default function Home() {
                   </View>
                 </View>
                 <Button
-                  label={t('submitGuess')}
+                  label={t("submitGuess")}
                   size="lg"
                   fullWidth
                   // Enabled only on a complete guess. A submit that can only
@@ -223,18 +266,19 @@ export default function Home() {
                   disabled={selection.length !== WORDS_PER_GROUP}
                   onPress={() => void submit()}
                 />
-                <Text variant="caption" tone="faint" align="center">
-                  {t('pickFour')}
-                </Text>
               </View>
             )}
 
             {finished ? (
               <View style={{ marginTop: spacing.xl }}>
                 <Text variant="caption" tone="muted">
-                  {t('answersTitle')}
+                  {t("answersTitle")}
                 </Text>
-                <Text variant="caption" tone="faint" style={{ marginTop: spacing.xs }}>
+                <Text
+                  variant="caption"
+                  tone="faint"
+                  style={{ marginTop: spacing.xs }}
+                >
                   {`${bands.length}/${GROUPS_PER_PUZZLE}`}
                 </Text>
               </View>
