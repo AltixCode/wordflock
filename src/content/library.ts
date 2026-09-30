@@ -21,13 +21,13 @@
  * connection gets a month before the app has to ask for one.
  */
 
-import bank from '../../data/puzzles.json';
-import { puzzleFor } from '../logic/daily';
-import type { Puzzle } from '../logic/puzzle';
-import { daysBetween, type DateKey } from '../logic/dateKey';
-import { puzzleOn } from './cache';
+import bank from "../../data/puzzles.json";
+import { puzzleFor } from "../logic/daily";
+import type { Puzzle } from "../logic/puzzle";
+import { daysBetween, type DateKey } from "../logic/dateKey";
+import { puzzleOn } from "./cache";
 
-export type PuzzleSource = 'feed' | 'bundled';
+export type PuzzleSource = "feed" | "bundled";
 
 export interface ResolvedPuzzle {
   puzzle: Puzzle;
@@ -37,7 +37,8 @@ export interface ResolvedPuzzle {
 }
 
 /** The bundled bank, as shipped. Never empty — `check:puzzles` refuses that. */
-export const BUNDLED: readonly Puzzle[] = (bank as { puzzles: Puzzle[] }).puzzles;
+export const BUNDLED: readonly Puzzle[] = (bank as { puzzles: Puzzle[] })
+  .puzzles;
 
 /** How many days the bundled bank can serve before it would have to repeat. */
 export const BUNDLED_DAYS = BUNDLED.length;
@@ -54,15 +55,25 @@ export function bundledCovers(key: DateKey, installedOn: DateKey): boolean {
   return since < BUNDLED_DAYS;
 }
 
-export async function resolvePuzzle(key: DateKey, installedOn: DateKey): Promise<ResolvedPuzzle | null> {
+export async function resolvePuzzle(
+  key: DateKey,
+  installedOn: DateKey,
+): Promise<ResolvedPuzzle | null> {
   const fromFeed = await puzzleOn(key);
-  if (fromFeed !== null) return { puzzle: fromFeed, source: 'feed', bundledDaysLeft: 0 };
+  if (fromFeed !== null)
+    return { puzzle: fromFeed, source: "feed", bundledDaysLeft: 0 };
   if (BUNDLED.length === 0) return null;
   if (!bundledCovers(key, installedOn)) return null;
   const since = daysBetween(installedOn, key);
   return {
-    puzzle: puzzleFor(key, BUNDLED),
-    source: 'bundled',
+    // `installedOn`, not the default fixed epoch: `puzzleFor`'s cycle boundaries fall every
+    // BUNDLED_DAYS days from whatever epoch it's given, and this player's own covered window
+    // (see `bundledCovers`, above) is anchored on their install date, not on the bank's fixed
+    // epoch. Anchoring the puzzle selection anywhere else lets a player's own 30 covered days
+    // straddle two unrelated shuffle cycles and repeat a bank entry — exactly what testers
+    // reported ("the same puzzle again within days").
+    puzzle: puzzleFor(key, BUNDLED, installedOn),
+    source: "bundled",
     bundledDaysLeft: Math.max(0, BUNDLED_DAYS - 1 - Math.max(0, since)),
   };
 }
